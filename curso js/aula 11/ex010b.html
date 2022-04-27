@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 010b</title>
+    <style>
+        body {
+            background-color: aliceblue;
+            font: normal 14pt Arial;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Nacionalidade</h1>
+    Qual seu pais de origem? <input type="text" name="pais" id="pais">
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="res"></div>
+
+    <script>
+        function calcular() {
+            let pais = window.document.getElementById("pais");
+            let res = window.document.getElementById("res");
+            res.innerHTML = `<p>Você é de <strong>${pais.value}</strong>. Bem vindo(a)! TamoJunto</p>`;
+
+            if (pais.value == "brasil") {
+                res.innerHTML += "<p>Você é <strong>brasileiro(a)</strong>. peepoBrazil</p>";
+            } else {    
+                res.innerHTML += "<p>Você é <strong>estrangeiro(a)</strong>. hmmNice</p>";
+            }
+        }
+    </script>
+</body>
+</html>
